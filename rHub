@@ -35,7 +35,7 @@ local Window = Rayfield:CreateWindow({
 })
 
 local MainTab = Window:CreateTab("🏠 Farm ", nil) -- Title, Image
-local MainSection = MainTab:CreateSection("Section Example")
+local MainSection = MainTab:CreateSection("Best Farms")
 
 Rayfield:Notify({
    Title = "Welcome, User!",
@@ -87,5 +87,27 @@ local Button = MainTab:CreateButton({
     ["LOWTEXTURE"] = true-- Reduce graphic quality for better performance
 }
 loadstring(game:HttpGet("https://raw.githubusercontent.com/simple-hubs/contents/refs/heads/main/bloxfruit-kaitan-main.lua"))()
+   end,
+})
+
+local ScriptHubTab = Window:CreateTab("📑 Script Hubs ", nil) -- Title, Image
+local ScriptHubTabSection = ScriptHubTab:CreateSection("Scripts")
+
+local Button = ScriptHubTab:CreateButton({
+   Name = "😁 Azure (Keyless)",
+   Callback = function()
+   getgenv().Team = "Pirates"
+getgenv().AutoLoad = false --Will Load Script On Server Hop
+getgenv().SlowLoadUi  = false
+getgenv().ForceUseSilentAimDashModifier = false --Force turn on silent aim , if error then executor problem
+getgenv().ForceUseWalkSpeedModifier = false --Force turn on Walk Speed Modifier , if error then executor problem
+ loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/3b2169cf53bc6104dabe8e19562e5cc2.lua"))()
+   end,
+})
+
+local Button = ScriptHubTab:CreateButton({
+   Name = "😅 Ronix (Keyless)",
+   Callback = function()
+   loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/b5f968ca22436160479678e830766cc4.lua"))()
    end,
 })
