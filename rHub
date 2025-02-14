@@ -35,8 +35,7 @@ local Window = Rayfield:CreateWindow({
 })
 
 local MainTab = Window:CreateTab("🏠 Farm/Main ", nil) -- Title, Image
-local MainSection = MainTab:CreateSection("Best Farms")
-local BasicScriptsSection = MainTab:CreateSection("Common Scripts")
+local MainSection = MainTab:CreateSection("On-Top Scripts")
 
 
 
@@ -48,7 +47,14 @@ Rayfield:Notify({
 })
 
 local Button = MainTab:CreateButton({
-   Name = "🙂‍↕️ | Smart AutoGrind",
+   Name = "🗣️ | Infinite Yield Reborn",
+   Callback = function()
+   loadstring(game:HttpGet("https://github.com/fuckusfm/infiniteyield-reborn/raw/master/source"))()
+   end,
+})
+
+local Button = MainTab:CreateButton({
+   Name = "😎 | Smart AutoGrind",
    Callback = function()
    getgenv().simple_settings = {
     ["MASTERY"] = { -- Settings related to leveling up weapon or skill mastery
@@ -93,12 +99,7 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/simple-hubs/contents/
    end,
 })
 
-local Button = BasicScriptsSection:CreateButton({
-   Name = "🗣️ | Infinite Yield Reborn",
-   Callback = function()
-   loadstring(game:HttpGet("https://github.com/fuckusfm/infiniteyield-reborn/raw/master/source"))()
-   end,
-})
+
 
 local ScriptHubTab = Window:CreateTab("📑 Script Hubs ", nil) -- Title, Image
 local ScriptHubTabSection = ScriptHubTab:CreateSection("Scripts")
