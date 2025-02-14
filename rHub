@@ -30,7 +30,7 @@ local Window = Rayfield:CreateWindow({
       FileName = "officialexploitshubkey", -- It is recommended to use something unique as other scripts using Rayfield may overwrite your key file
       SaveKey = false, -- The user's key will be saved, but if you change the key, they will be unable to use your script
       GrabKeyFromSite = true, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
-      Key = {"https://pastebin.com/bvYUMdeg"} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
+      Key = {"https://pastebin.com/raw/bvYUMdeg"} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
    }
 })
 
@@ -79,12 +79,8 @@ local Button = MainTab:CreateButton({
 
     ["FRUITPURCHASE"] = true, -- Automatically purchase fruits based on priority list
     ["PRIORITYFRUIT"] = { -- List of preferred fruits to purchase or eat in order of priority
-        [1] = "Dragon-Dragon",
-        [2] = "Dough-Dough",
-        [3] = "Flame-Flame",
-        [4] = "Rumble-Rumble",
-        [5] = "Human-Human: Buddha",
-        [6] = "Dark-Dark",
+        [1] = "Buddha-Buddha",
+        [2] = "Dark-Dark",
     },
 
     ["FPSCAP"] = 30, -- Limit the frame rate to optimize performance
