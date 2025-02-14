@@ -1,7 +1,7 @@
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 
 local Window = Rayfield:CreateWindow({
-   Name = "🍎 rHub 🍎",
+   Name = "rHub Premium",
    Icon = 9011713775, -- Icon in Topbar. Can use Lucide Icons (string) or Roblox Image (number). 0 to use no icon (default).
    LoadingTitle = "Loading Hub...",
    LoadingSubtitle = "by officialexploits (ridhwan)",
@@ -36,7 +36,7 @@ local Window = Rayfield:CreateWindow({
 
 local MainTab = Window:CreateTab("🏠 Farm/Main ", nil) -- Title, Image
 local MainSection = MainTab:CreateSection("On-Top Scripts")
-
+local CommonScriptsSection = MainTab:CreateSection("Common Scripts")
 
 
 Rayfield:Notify({
@@ -46,14 +46,14 @@ Rayfield:Notify({
    Image = nil,
 })
 
-local Button = MainTab:CreateButton({
+local Button1 = CommonScriptsSection:CreateButton({
    Name = "🗣️ | Infinite Yield Reborn",
    Callback = function()
    loadstring(game:HttpGet("https://github.com/fuckusfm/infiniteyield-reborn/raw/master/source"))()
    end,
 })
 
-local Button = MainTab:CreateButton({
+local Button = MainSection:CreateButton({
    Name = "😎 | Smart AutoGrind",
    Callback = function()
    getgenv().simple_settings = {
