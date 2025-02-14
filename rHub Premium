@@ -2,7 +2,7 @@ local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 
 local Window = Rayfield:CreateWindow({
    Name = "rHub Premium Vers.",
-   Icon = 9011713775, -- Icon in Topbar. Can use Lucide Icons (string) or Roblox Image (number). 0 to use no icon (default).
+   Icon = 10890175548, -- Icon in Topbar. Can use Lucide Icons (string) or Roblox Image (number). 0 to use no icon (default).
    LoadingTitle = "Script Hub",
    LoadingSubtitle = "by officialexploits (ridhwan)",
    Theme = "Default", -- Check https://docs.sirius.menu/rayfield/configuration/themes
