@@ -1,9 +1,9 @@
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 
 local Window = Rayfield:CreateWindow({
-   Name = "🍎 Blox Fruits 🍎",
+   Name = "🍎 rHub 🍎",
    Icon = 9011713775, -- Icon in Topbar. Can use Lucide Icons (string) or Roblox Image (number). 0 to use no icon (default).
-   LoadingTitle = "Script Hub",
+   LoadingTitle = "Loading Hub...",
    LoadingSubtitle = "by officialexploits (ridhwan)",
    Theme = "Default", -- Check https://docs.sirius.menu/rayfield/configuration/themes
 
@@ -34,8 +34,11 @@ local Window = Rayfield:CreateWindow({
    }
 })
 
-local MainTab = Window:CreateTab("🏠 Farm ", nil) -- Title, Image
+local MainTab = Window:CreateTab("🏠 Farm/Main ", nil) -- Title, Image
 local MainSection = MainTab:CreateSection("Best Farms")
+local BasicScriptsSection = MainTab:CreateSection("Common Scripts")
+
+
 
 Rayfield:Notify({
    Title = "Welcome, User!",
@@ -45,7 +48,7 @@ Rayfield:Notify({
 })
 
 local Button = MainTab:CreateButton({
-   Name = "Smart AutoGrind",
+   Name = "🙂‍↕️ | Smart AutoGrind",
    Callback = function()
    getgenv().simple_settings = {
     ["MASTERY"] = { -- Settings related to leveling up weapon or skill mastery
@@ -90,11 +93,18 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/simple-hubs/contents/
    end,
 })
 
+local Button = BasicScriptsSection:CreateButton({
+   Name = "🗣️ | Infinite Yield Reborn",
+   Callback = function()
+   loadstring(game:HttpGet("https://github.com/fuckusfm/infiniteyield-reborn/raw/master/source"))()
+   end,
+})
+
 local ScriptHubTab = Window:CreateTab("📑 Script Hubs ", nil) -- Title, Image
 local ScriptHubTabSection = ScriptHubTab:CreateSection("Scripts")
 
 local Button = ScriptHubTab:CreateButton({
-   Name = "😁 Azure (Keyless)",
+   Name = "😁 | Azure (Keyless)",
    Callback = function()
    getgenv().Team = "Pirates"
 getgenv().AutoLoad = false --Will Load Script On Server Hop
@@ -106,7 +116,7 @@ getgenv().ForceUseWalkSpeedModifier = false --Force turn on Walk Speed Modifier 
 })
 
 local Button = ScriptHubTab:CreateButton({
-   Name = "😅 Ronix (Keyless)",
+   Name = "😅 | Ronix (Keyless)",
    Callback = function()
    loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/b5f968ca22436160479678e830766cc4.lua"))()
    end,
