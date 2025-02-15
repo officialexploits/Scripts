@@ -34,3 +34,19 @@ local Window = Rayfield:CreateWindow({
    }
 })
 
+local FunctionsTab = Window:CreateTab("🔗 Tab: Functions", nil) -- Title, Image
+local TeamSwitchSection = FunctionsTab:CreateSection("Team Switcher")
+
+local Button = Tab:CreateButton({
+   Name = "Pirates",
+   Callback = function()
+       getgenv().Team = "Pirates"           
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "Marines",
+   Callback = function()
+       getgenv().Team = "Marines"     
+   end,
+})
