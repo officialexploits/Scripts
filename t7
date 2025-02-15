@@ -2,7 +2,7 @@ local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 
 local Window = Rayfield:CreateWindow({
    Name = "RHub Superior 1.0.0",
-   Icon = 0, -- Icon in Topbar. Can use Lucide Icons (string) or Roblox Image (number). 0 to use no icon (default).
+   Icon = 0
    LoadingTitle = "Loading Interface, Rayfield",
    LoadingSubtitle = "by officialexploits",
    Theme = "DarkBlue", -- Check https://docs.sirius.menu/rayfield/configuration/themes
@@ -26,10 +26,50 @@ local Window = Rayfield:CreateWindow({
    KeySettings = {
       Title = "Key System",
       Subtitle = "Input",
-      Note = "No method of obtaining the key is provided unless directly given by @officialexploits on GitHub.", -- Use this to tell the user how to get a key
+      Note = "No method of obtaining the key is provided unless directly given.", -- Use this to tell the user how to get a key
       FileName = "RHubKeys", -- It is recommended to use something unique as other scripts using Rayfield may overwrite your key file
       SaveKey = false, -- The user key will be saved, but if you change the key, they will be unable to use your script
       GrabKeyFromSite = true, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
       Key = {"https://pastebin.com/raw/bvYUMdeg"} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
    }
+})
+
+Rayfield:Notify({
+   Title = "Welcome, User.",
+   Content = "Advised to proceed carefully, being reckless with some scripts could reset you.",
+   Duration = 5,
+   Image = nil,
+})
+
+local FunctionsTab = Window:CreateTab("🔗 Tab: Functions", nil) -- Title, Image
+local TeamSwitchSection = FunctionsTabTab:CreateSection("Team Switcher")
+
+local Button = Tab:CreateButton({
+   Name = "Pirates",
+   Callback = function()
+       getgenv().Team = "Pirates"
+
+Rayfield:Notify({
+   Title = "Switched your team to Pirates.",
+   Content = "Not functioning? Chill out.",
+   Duration = 5,
+   Image = nil,
+})
+            
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "Marines",
+   Callback = function()
+       getgenv().Team = "Marines"
+
+Rayfield:Notify({
+   Title = "Switched your team to Marines.",
+   Content = "Not functioning? Chill out.",
+   Duration = 5,
+   Image = nil,
+})
+            
+   end,
 })
