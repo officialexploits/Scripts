@@ -3,8 +3,8 @@ local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 local Window = Rayfield:CreateWindow({
    Name = "rHub Premium Version",
    Icon = 0, -- Icon in Topbar. Can use Lucide Icons (string) or Roblox Image (number). 0 to use no icon (default).
-   LoadingTitle = "Script Hub",
-   LoadingSubtitle = "by officialexploits (ridhwan)",
+   LoadingTitle = "Loading RHub",
+   LoadingSubtitle = "powered by Rayfield",
    Theme = "Default", -- Check https://docs.sirius.menu/rayfield/configuration/themes
 
    DisableRayfieldPrompts = false,
@@ -24,9 +24,9 @@ local Window = Rayfield:CreateWindow({
 
    KeySystem = true, -- Set this to true to use our key system
    KeySettings = {
-      Title = "OfficialExploits | Key",
-      Subtitle = "Contact For Key",
-          Note = "A dedicated Now.GG Proxy", -- Use this to tell the user how to get a key
+      Title = "Key",
+      Subtitle = "Input",
+      Note = "Powered by @officialexploits", -- Use this to tell the user how to get a key
       FileName = "officialexploitshubkey", -- It is recommended to use something unique as other scripts using Rayfield may overwrite your key file
       SaveKey = false, -- The user's key will be saved, but if you change the key, they will be unable to use your script
       GrabKeyFromSite = true, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
@@ -34,15 +34,8 @@ local Window = Rayfield:CreateWindow({
    }
 })
 
-local MainTab = Window:CreateTab("🏠 Farm/Home ", nil) -- Title, Image
+local MainTab = Window:CreateTab("🔗 Functions ", nil) -- Title, Image
 local MainSection = MainTab:CreateSection("Best Farms")
-
-Rayfield:Notify({
-   Title = "Welcome, User!",
-   Content = "Keyless Scripts",
-   Duration = 5,
-   Image = nil,
-})
 
 local Button = MainTab:CreateButton({
    Name = "😎 | Smart AutoGrind",
