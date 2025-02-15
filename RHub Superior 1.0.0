@@ -1,7 +1,4 @@
---// Booting Rayfield //--
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
-
---// Bootstrapper Window //--
 
 local Window = Rayfield:CreateWindow({
    Name = "RHub Superior 1.0.0",
@@ -35,30 +32,4 @@ local Window = Rayfield:CreateWindow({
       GrabKeyFromSite = true, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
       Key = {"https://pastebin.com/raw/bvYUMdeg"} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
    }
-})
-
-local HomeTab = Window:CreateTab("🔗 Functions", nil) -- Title, Image
-local HomeSection = Tab:CreateSection("Team Changer")
-
-local Button = HomeTab:CreateButton({
-   Name = "Pirates | ⚔️",
-   Callback = function()
-       getgenv().Team = "Pirates"
-   end,
-})
-
-local Button = HomeTab:CreateButton({
-   Name = "Marines | 👮🏼",
-   Callback = function()
-       getgenv().Team = "Marines"
-   end,
-})
-
-local ScriptSection = Tab:CreateSection("Common Scripts")
-
-local Button = HomeTab:CreateButton({
-   Name = "Infinite Yeild | 💀",
-   Callback = function()
-       loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
-   end,
 })
